@@ -13,10 +13,10 @@ Future<void> initStorage() async {
 /// Add a value to GetStorage based on its type (supports String, int, bool, double, Map<String, dynamic>, StringList)
 Future<bool> setValue(String key, dynamic value, {bool print = true}) async {
   if (value == null) {
-    if (print) print('$key - value is null');
+    if (print) log('$key - value is null');
     return Future.value(false);
   }
-  if (print) print('${value.runtimeType} - $key - $value');
+  if (print) log('${value.runtimeType} - $key - $value');
 
   if (value is String) {
     storage.write(key, value);
