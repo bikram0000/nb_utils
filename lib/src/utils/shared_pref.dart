@@ -3,11 +3,11 @@ import 'dart:convert';
 import 'package:nb_utils/nb_utils.dart';
 import 'package:get_storage/get_storage.dart';
 
-final GetStorage storage = GetStorage();
+final GetStorage storage = GetStorage('nb_utils');
 
 /// Initialize GetStorage
 Future<void> initStorage() async {
-  await GetStorage.init();
+  await GetStorage.init('nb_utils');
 }
 
 /// Add a value to GetStorage based on its type (supports String, int, bool, double, Map<String, dynamic>, StringList)
